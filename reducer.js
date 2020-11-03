@@ -4,6 +4,8 @@ export const initialState = {
 };
 
 //Selector
+export const getBasketTotal = (basket) =>
+ basket?.reduce((amount, item) => item.price + amount, 0);
 
 // reducer think it as  a data layer
 const reducer = (state, action) => {
